@@ -49,6 +49,10 @@ const StyledHome = styled.div`
         color: #ff0101;
       }
     }
+
+    @media screen and (max-width: 1250px) {
+      padding: 32px 32px;
+    }
   }
 
   .charts {
