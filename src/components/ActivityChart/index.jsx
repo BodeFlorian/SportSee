@@ -32,10 +32,6 @@ const renderCustomTooltip = ({ active, payload }) => {
 }
 
 export default function ActivityChart({ data }) {
-  for (let i = 0; i < data.data.sessions.length; i++) {
-    data.data.sessions[i].day = i + 1
-  }
-
   return (
     <ResponsiveContainer width="100%" height="90%">
       <BarChart data={data.data.sessions} barGap={12} barSize={8}>

@@ -38,6 +38,13 @@ export function DataContextProvider(props) {
     error: performanceError,
   } = useFetch(performanceUrl)
 
+  // Format the activityData day
+  if (activityData) {
+    for (let i = 0; i < activityData.data.sessions.length; i++) {
+      activityData.data.sessions[i].day = i + 1
+    }
+  }
+
   const isLoading =
     isUserLoading ||
     isActivityLoading ||
